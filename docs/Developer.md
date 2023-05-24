@@ -6,7 +6,7 @@
 
 + 使用electron框架搭建的桌面应用程序，为界面提供了系统API和文件API。
 
-+ 使用React框架基于TypeScript搭建的GUI界面，所有组件均基于框架原生封装实现。
++ 使用React框架基于TypeScript搭建的GUI界面，绝大部分组件基于框架原生封装实现，工作流定制部分引用了antd组件。
 
 + 引入linaria实现css-in-js开发，采用vw/vh/%单位取代px单位实现了响应式界面布局。
 
@@ -18,9 +18,9 @@
 
 + 采用JSON格式作为运行配置文件。
 
-+ 内置集成了MAFFT、trimAl、IQ-TREE、FigTree。
++ 内置集成了MAFFT、MACSE、trimAl、IQ-TREE、MrBayes、FigTree、wASTRAL、ALTER。
 
-+ 运行FigTree依赖的JRE(Java Running Environment)未内置。
++ 运行MACSE、FigTree、ALTER依赖的JRE(Java Running Environment)未内置。
 
 + 备注事项
 
@@ -46,11 +46,11 @@ CamlTree-GUI
 │   │   ├── FilePath.tsx 文件路径块组件
 │   │   ├── InputButton.tsx 输入按钮组件
 │   │   ├── Introduce.tsx 程序简介文本块组件
-│   │   ├── ModeSelector.tsx 模式选择器组件
 │   │   ├── RunButton.tsx 运行按钮组件
-│   │   ├── Runner.tsx 运行器组件
+|   |   ├── StepOptions.tsx 分析步骤选项栏组件
 │   │   ├── TitlePictrue.tsx 标题图片组件
 │   │   ├── ToolArgv.tsx 工具参数块组件
+│   │   ├── WorkFlow.tsx 工作流组件
 │   │   └── common
 │   │       ├── ButtonTemplate.tsx 按钮模板组件
 │   │       ├── HeaderLine.tsx 顶部行容器组件
@@ -74,18 +74,22 @@ CamlTree-GUI
 │   │   ├── homepage.json 项目主页配置
 │   │   └── title.png 标题图片
 │   ├── stores
+│   │   ├── alignment.ts 序列对齐方法状态
 │   │   ├── allow.ts 页面可用性状态
 │   │   ├── config.ts 工具参数配置状态
-│   │   ├── figtree.ts 运行参数状态(FigTree)
 │   │   ├── index.ts 状态引用接口
 │   │   ├── input.ts 输入文件列表状态
 │   │   ├── iqtree.ts 运行参数状态(IQ-TREE)
 │   │   ├── load.ts 应用加载状态
+│   │   ├── macse.ts 运行参数状态(MACSE)
 │   │   ├── mafft.ts 运行参数状态(MAFFT)
-│   │   ├── mode.ts 运行模式状态
+│   │   ├── optimize.ts 对齐优化方法状态
 │   │   ├── output.ts 输出目录状态
 │   │   ├── running.ts 运行参数状态集合
-│   │   └── trimal.ts 运行参数状态(trimAl)
+│   │   ├── strategy.ts 分析策略状态
+│   │   ├── tree.ts 建树方法状态
+│   │   ├── trimal.ts 运行参数状态(trimAl)
+│   │   └── workflow.ts 工作流状态
 │   └── vite-env.d.ts 类型声明文件(vite)
 ├── src-electron
 │   ├── main.ts 应用入口脚本(electron)
@@ -102,6 +106,7 @@ CamlTree-GUI
 │   │       ├── icon.icns 应用图标(MacOS)
 │   │       ├── icon.ico 应用图标(Windows)
 │   │       └── icon@2x.png 任务栏图标
+│   ├── tools-java 应用依赖工具(jar文件)
 │   ├── tools-mac 应用依赖工具(MacOS版本)
 │   └── tools-win 应用依赖工具(Windows版本)
 ├── tsconfig.json 编译配置(TypeScript)
