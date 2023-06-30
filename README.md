@@ -31,11 +31,7 @@
 2. Concatenator基于PySide6构建，放弃了对Windows7等较旧版本系统的支持，而CamlTree通过限制使用22版本的Electron框架兼容了Windows7支持。
 3. Concatenator目前仍处于极不稳定的测试版本，我们测试发现无法正常运行，而CamlTree已经足够稳定可用。
 
-## 文档导航
-
-### [用户手册](./docs/User.md)
-
-### [开发文档](./docs/Developer.md)
+## [用户手册](./docs/User.md)
 
 ## 版权声明
 
