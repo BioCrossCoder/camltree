@@ -1,131 +1,137 @@
-# 用户手册
+# Guidance
 
-## 快速开始
+## Quick Start
 
-***当用户想要快速上手使用本产品时，请遵循以下操作流程；程序将自动加载默认运行配置（用户未定制）或当前配置（用户已定制）。***
+***When you want to quickly get started with this product, please follow the operation processes below; The program will automatically load the default running configuration (when you has not customized) or the current configuration (when you has customized).***
 
-### 操作流程
+### Operation Process
 
-`开始`→`定制工作流`→`选择输入文件`→`配置输出路径`→`提交任务运行`
+`Start`→`Customize a Workflow`→`Select Input Files`→`Specify an Output Path`→`Submit`
 
-1. 开始：点击`Start`按钮。
+1. Start: Click the `Start` button.
 
-2. 定制工作流
+2. Customize a Workflow
 
-    ***用户可以通过表格中的按钮选项定制工作流***
+    ***You can customize a workflow through the button options in the table.***
 
-    + *步骤1*：选择分析策略（`串联处理`/`并联处理`/`单独处理`）。
-    + *步骤2*：选择序列对齐方法（`MAFFT`/`MACSE`/`无`）。
-    + *步骤3*：选择序列优化方法（`trimAl`/`无`）。
-    + *步骤4*：选择建树方法（`IQ-TREE`/`MrBayes`/`无`）。
-    + ***注意***：当采用并联处理时不允许使用`MrBayes`建树；采用并联处理且不建树时不允许进行序列对齐或对齐优化。
+    + *Step 1*: Select **Analysis Strategy**(`Concatenation`/`Coalescence`/`Seperation`).
+    + *Step 2*: Select **Sequence Alignment** method(`MAFFT`/`MACSE`/`Skip`).
+    + *Step 3*: Select **Alignment Optimization** method(`trimAl`/`Skip`).
+    + *Step 4*: Select **Tree Construction** method(`IQ-TREE`/`MrBayes`/`Skip`).
+    + ***Attention***: When **Analysis Strategy** is `Coalescence`, `MrBayes` is not allowed; When **Analysis Strategy** is `Coalescence` and `Skip` **Tree Construction**, **Sequence Alignment** or **Alignment Optimization** is not allowed.
 
-3. 选择输入文件
+3. Select Input Files
 
-    ***根据工作流的起点不同，对输入文件的格式和内容有不同的要求***
+    ***Depending on the first task of the workflow, there are different requirements for the format and content of the input files.***
 
-    **不同工作流起点的输入文件要求**
+    **Format Requirements**
 
     + `MAFFT`/`MACSE`
 
-      >输入文件为**FASTA**格式序列文件。
+      >Input files should be sequence files in **FASTA** format.
 
     + `trimAl`/`IQ-TREE`/`MrBayes`
 
-      >输入文件为**FASTA**/**ALN**/**MEGA**/**PHYLIP**/**NEXUS**格式序列对齐文件。
+      >Input files should be sequence alignment files in **FASTA**/**ALN**/**MEGA**/**PHYLIP**/**NEXUS** format.
 
     + `Concatenation`
 
-      >输入文件为一组**FASTA**/**ALN**/**MEGA**/**PHYLIP**/**NEXUS**格式序列对齐文件，不同文件中被拼接的序列必须名称相同。
+      >Input files should be a group of sequence alignment files in **FASTA**/**ALN**/**MEGA**/**PHYLIP**/**NEXUS** format, and the sequences will be concatenated together from different files must have the same name.
 
     + `wASTRAL`
 
-      >输入文件为多个**NEWICK**格式进化树文件，不同进化树中被合并的分支必须名称相同。
+      >Input files should be several evolution tree files in **NEWICK** format, and the branches will be merged together from different files must have the same name.
 
-    **输入文件方法**
+    **Operation Process**
 
-    + ***方法1***：选择文件
-      + *步骤1*：点击`OPEN`按钮打开弹窗。
-      + *步骤2*：选择输入文件（允许进行多选）；注意当运行任务为`figtree`时需要通过弹窗中文件名输入框右侧的下拉列表选择**Phylogeny Tree**类型文件。
-      + *步骤3*：点击`确定`按钮。
-      + ***注意***：这种方式会覆盖已有的输入文件配置。
+    + ***Method 1***: Select files
+      + *Step 1*: Click the `OPEN` button to open a popup window.
+      + *Step 2*: Select input files (multiselect is allowed); The default matching is **FASTA** format sequence files. When you want to match other formats, please select the corresponding type in the dropdown list on the right side of the file name input box in the popup window; When your input files cannot be correctly matched and displayed, please check their suffixes and modify them to legal ones or select `All Files` for matching (not recommended).
+      + *Step 3*: Click the `OK` button.
+      + ***Attention***: This way will overwrite the existing **INPUT File(s)** configuration.
 
-    + ***方法2***：键盘输入路径
-      + *步骤1*：点击`MODIFY`按钮开启文本框输入模式。
-      + *步骤2*：键盘输入文件路径（每行一个输入文件的路径）。
-      + *步骤3*：点击`OK`按钮保存修改。
-      + ***备注***：用户可以复制粘贴或通过系统快捷键撤销文本输入操作。
+    + ***Method 2***: Keyboard entry
+      + *Step 1*: Click the `MODIFY` button to active the textarea.
+      + *Step 2*: Enter input file paths by keyboard (one input file path per line).
+      + *Step 3*: Click the `OK` button to save the change.
+      + ***Notice***: You can copy and paste or undo operations through system shortcuts.
 
-4. 配置输出路径
+4. Specify an Output Path
 
-    ***程序执行任务的结果会保存到用户指定的输出路径，需要注意的是`figtree`任务没有输出因此这项配置无效。***
+    ***The outputs of the workflow will be saved to the output path you specified.***
 
-    + ***方法1***：选择目录
-      + *步骤1*：点击`SAVE`按钮打开弹窗。
-      + *步骤2*：选择输出文件夹目录。
-      + *步骤3*：输入自定义的目录名称。
-      + *步骤4*：点击`确定`按钮。
-      + ***注意***：这种方式会覆盖已有的输出路径配置。
+    + ***Method 1***: Select a path
+      + *Step 1*: Click the `SAVE` button to open a popup window.
+      + *Step 2*: Select a directory.
+      + *Step 3*: Enter a custom directory name (It cannot have the same name as an existing file or directory).
+      + *Step 4*: Click the `OK` button.
+      + ***Attention***: This way will overwrite the existing **OUTPUT Path** configuration.
 
-    + ***方法2***：键盘输入路径
-      + *步骤1*：点击`MODIFY`按钮开启文本框输入模式。
-      + *步骤2*：键盘输入目标路径（只能输入一个路径且不允许手动换行）。
-      + *步骤3*：点击`OK`按钮保存修改。
-      + ***备注***：用户可以复制粘贴或通过系统快捷键撤销文本输入操作。
+    + ***Method 2***: Keyboard entry
+      + *Step 1*: Click the `MODIFY` button to active the textarea.
+      + *Step 2*: Enter an output path by keyboard (You can only enter one path and line breaks are not allowed).
+      + *Step 3*: Click the `OK` button to save the change.
+      + ***Notice***: You can copy and paste or undo operations through system shortcuts.
 
-5. 提交任务运行
+5. Submit
 
-    ***在完成运行参数的配置和输入输出的指定后，需要用户主动提交任务。***
+    ***After completing the steps above, you need to submit your analysis tasks.***
 
-    + 任务开始
-      + *步骤1*：点击`RUN`按钮提交任务执行，会弹窗显示任务运行参数配置。
-      + *步骤2*：点击`确定`按钮提交任务，任务将在后台运行。
-      + ***参数检验***：提交任务时，如果输出路径或输入文件不合法，程序会阻止提交并弹窗报错。
+    + Start
+        + *Step 1*: Click the `RUN` button to submit the tasks, and a popup window will display the running parameters configuration of them.
+        + *Step 2*: Click the `OK` button to confirm the submission, and the tasks will run in the background. The task progress will be displayed in the sub window of the program. You can click the title of the task progress item to open its output directory.
+        + ***Parameter Check***: If **OUTPUT Path** or **INPUT File(s)** is illegal, the program will prevent the task submission and popup a window to report the error message.
 
-    + 任务结束
-      + 当任务运行结束时，程序会弹窗提示，可以点击`Go to the directory`按钮查看输出结果目录。
-      + 工作流中存在`IQ-TREE`/`MrBayes`/`wASTRAL`的情况下，任务完成时可以点击`View in FigTree`按钮调用**FigTree**可视化查看输出结果。
-      + ***异常结束***：任务执行过程中出错时，程序会直接中止任务并弹窗提示，可以点击`Show the logs`按钮查看错误日志。
+    + Finish
+      + When the tasks ends, the program will popup a window to inform you, and you can click the `Go to the directory` button to view the output directory.
+      + When `IQ-TREE`/`MrBayes`/`wASTRAL` is in the workflow, you can click the `View in FigTree` button to visualize the output results through **FigTree**.
+      + ***Exception***: When an error occurs during the task execution process, the program will directly abort the task and popup a window to inform you. You can click the `Show the logs` button to view the error log.
 
-## 如何定制
+6. ToolKit
 
-***当用户需要个性化定制运行配置时，请遵循以下操作步骤；定制页面总是会显示当前配置。***
+    ***The program provides the calling interfaces of 3 JAVA tools, which can be opened and used through the `FigTree`/`ALTER`/`MACSE` buttons.***
 
-1. 跳转页面：点击`Customize`按钮。
+    + [FigTree](http://tree.bio.ed.ac.uk/software/figtree) is a tool commonly used for visulizing and viewing evolution trees, which can also be used to edit and beautify evolution trees and create publishing level images.
+    + [ALTER](https://github.com/sing-group/ALTER) is an alignment sequence format conversion tool that can generate non-standard specific formats for different programs' input.
+    + [MACSE](https://bioweb.supagro.inra.fr/macse/) is a multiple sequence alignment tool for aligning coding genes, which also provides some other functions.
 
-2. 修改参数
+## How to Customize
 
-    ***程序执行任务调用的工具可以自定义其运行参数。***
+***When you need to customize the running configuration, please follow the operation steps below; Customize page always display the current configuration.***
 
-    **修改参数方法**
+1. Page Jump: Click the `Customize` button.
 
-    + ***方法1***：从键盘输入
-      + *步骤1*：点击`MODIFY`按钮开启文本框输入模式。
-      + *步骤2*：键盘输入参数（不允许换行）。
-      + *步骤3*：点击`OK`按钮保存修改。
-      + ***备注***：用户可以复制粘贴或通过系统快捷键撤销文本输入操作。
+2. Modify Parameters
 
-    + ***方法2***：从配置导入
-      + *步骤1*：在`config`下拉列表选择器选择配置（*开头表示程序内置配置）。
-      + *步骤2*：点击`LOAD`按钮。
-      + *步骤2.5*：`config`选择`...`时，选择**JSON**文件导入配置。
-      + *步骤3*：检查弹窗内容无误后点击`确认`。
-      + ***注意***：导入的运行参数会直接覆盖当前参数。
+    ***You can customize the running parameters of the tools called during the tasks.***
 
-3. 开始任务：点击`NEXT`按钮跳转页面，后续操作接[快速开始](#快速开始)第2步。
+    + ***Method 1***: Keyboard entry
+      + *Step 1*: Click the `MODIFY` button to active the textarea.
+      + *Step 2*: Enter parameters by keyboard (Line breaks are not allowed).
+      + *Step 3*: Click the `OK` button to save the change.
+      + ***Notice***: You can copy and paste or undo operations through system shortcuts.
+    
+    + ***Method 2***: Import a configuration
+      + *Step 1*: Select a configuration in the dropdown list (A * prefix indicates a program built-in configuration).
+      + *Step 2*: Click the `LOAD` button.
+      + *Step 2.5*: When you select `...`, import configuration by selecting a **JSON** file through the popup window.
+      + *Step 3*: Click the `OK` button after confirming the content displayed in the popup window.
+      + ***Attention***: The imported running parameters will overwrite the current ones.
 
-4. 导出配置
-    + *步骤1*：点击`SAVE`按钮，会弹窗显示导出配置内容。
-    + *步骤2*：点击`确定`按钮打开保存文件窗口。
-    + *步骤3*：选择输出文件夹目录。
-    + *步骤4*：输入自定义的文件名称。
-    + *步骤5*：点击`确定`按钮。
-    + ***备注***：保存在弹窗默认的**config**目录则配置会加载到`config`选择器列表中，可以用于快捷导入。
+3. Start a task: Click the `NEXT` button to jump to Start Page, and then follow Step 2 in [Quick Start](#quick-start).
 
-## 注意事项
+4. Export a configuration
+    + *Step 1*: Click the `SAVE` button, a popup window will display the configuration to be exported.
+    + *Step 2*: Click the `OK` button to open the SAVE window.
+    + *Step 3*: Select an output directory.
+    + *Step 4*: Enter a custom file name (It cannot have the same name as an existing file or directory).
+    + *Step 5*: Click the `OK` button.
+    + ***Notice***: If a configuration is saved in the default directory **config**, it will be loaded into the dropdown list for quick import.
 
-1. JAVA运行环境（JRE）是运行`FigTree`/`ALTER`/`MACSE`必要的依赖，需要在运行的电脑上本地安装JRE并将其可执行文件路径配置到环境变量中。
+## Notes
 
-2. 工作流存在`Concatenation`/`wASTRAL`时，输入文件中的序列/树分支命名必须遵循它们的要求。
+1. JAVA Running Environment (JRE) is necessary for running `FigTree`/`ALTER`/`MACSE`, you have to install it locally and configure the environment variables.
 
-3. 在没有特定需求的情况下，推荐采用默认配置运行任务。
+2. When the workflow includes `Concatenation`/`wASTRAL`, the sequence/tree branch naming in input files must follow their requirements.
+
+3. Default settings are recommended unless you have specific requirements.
