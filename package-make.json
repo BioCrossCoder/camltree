@@ -1,0 +1,8 @@
+{
+  "main": "main.js",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^22.3.4"
+  }
+}

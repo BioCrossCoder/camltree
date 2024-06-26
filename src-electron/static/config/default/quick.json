@@ -1,0 +1,6 @@
+{
+    "mafftArguments":"--retree 1 --maxiterate 0 --inputorder",
+    "iqtreeArguments":"--quiet --fast",
+    "trimalArguments":"-automated1",
+    "macseArguments":"-prog alignSequences"
+}

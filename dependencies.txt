@@ -1,0 +1,8 @@
+1. MAFFT[https://mafft.cbrc.jp/alignment/software]
+2. IQ-TREE[http://www.iqtree.org]
+3. trimAl[http://trimal.cgenomics.org]
+4. FigTree[http://tree.bio.ed.ac.uk/software/figtree]
+5. MACSE[https://bioweb.supagro.inra.fr/macse/]
+6. MrBayes[http://nbisweden.github.io/MrBayes/]
+7. wASTRAL[https://github.com/chaoszhang/ASTER/blob/master/tutorial/astral-hybrid.md]
+8. ALTER[https://github.com/sing-group/ALTER]

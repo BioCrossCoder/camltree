@@ -1,0 +1,28 @@
+{
+    "abstract":"CamlTree is a GUI program for molecular evolutionary genetics analysis, mainly used to study microgenes from mitochondria or viruses. It is easy to use and completely free. We suggest you read the user manual in [Guidance] before your first attempt. QUICK START: Click [Start] to work with default config.",
+    "guide":[
+        "QUICK START",
+        [
+            "Choose provided options to customize a workflow.",
+            "Click [Start].",
+            "Click [OPEN] to choose the input files.",
+            "Click [SAVE] to set the output path.",
+            "Click [RUN] to submit a task after confirming the CHECK.",
+            "You will be notified when the task ends."
+        ],
+        "HOW TO CUSTOMIZE (when default config cannot meet the requirements)",
+        [
+            "Click [Customize], then [MODIFY] or [LOAD].",
+            "Click [MODIFY] to input a running config item.",
+            "Choose a config through the dropdown list selector and [LOAD] it.",
+            "Click [NEXT] and then follow 'QUICK START'.",
+            "In addition, you can [SAVE] your own config."
+        ],
+        "ATTENTION",
+        [
+            "JAVA Running Environment is necessary for running FigTree/ALTER/MACSE.",
+            "Input sequences that need to be connected together must have the same names (letter cases are ignored) in order to make them connected correctly, so as the branches to be merged from different evloution trees.",
+            "Default settings are recommended unless you have specific requirements."
+        ]
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "mafftArguments":"--auto --inputorder",
+    "iqtreeArguments":"--quiet --mem 50% --safe -T AUTO --threads-max 2 --allnni -b 1000 --modelomatic",
+    "trimalArguments":"-automated1",
+    "macseArguments":"-prog alignSequences"
+}

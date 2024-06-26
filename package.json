@@ -1,0 +1,36 @@
+{
+  "name": "camltree",
+  "author": "Auston Yang",
+  "description": "A GUI program for phylogenetic analysis",
+  "private": true,
+  "version": "2.1.2",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "node build.js",
+    "preview": "vite preview",
+    "check": "tsc"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.1.4",
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "antd": "^5.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "recoil": "^0.7.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "electron": "^22.3.4",
+    "esbuild": "^0.17.12",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-electron-plugin": "^0.8.2"
+  }
+}
