@@ -8,7 +8,9 @@ A bioinformatics tool, mainly used for phylogeny analysis of functional microgen
 
 + Easy to use with powerful functions.
 + A brief and beautiful responsive graphical user interface.
-+ A cross-platform desktop application that supports both Windows and MacOS.
++ A desktop application supports Windows.
+
+    ***We used to support MacOS before successfully in `v1.x.x` versions, but it was not maintained anymore. Acutally, the permission issues in MacOS forcing us to drop support for it as we do not have enough time to waste on resolving this problem.***
 + Integrated several popular third-party tools in the field and users can customize the operating parameters of them.
 
 ## Comparison
