@@ -60,7 +60,7 @@ const WorkFlow=()=>{
                 {/* 分析策略选项组 */}
                 <StepOptions
                     title='Analysis Strategy'// 选项组标题
-                    options={['Concatenation','Coalescence','Seperation']}// 选项列表
+                    options={['Concatenation','Coalescence','Separation']}// 选项列表
                     option={strategy}// 将选项绑定到全局状态
                     choose={setStrategy}// 传入修改全局状态方法
                     allow={allow}// 传入页面可用性状态

@@ -3,7 +3,7 @@
   "author": "Auston Yang",
   "description": "A GUI program for phylogenetic analysis",
   "private": true,
-  "version": "2.1.2",
+  "version": "2.1.3",
   "main": "dist-electron/main.js",
   "scripts": {
     "start": "vite",
