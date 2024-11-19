@@ -30,8 +30,7 @@ A bioinformatics tool, mainly used for phylogeny analysis of functional microgen
 ### Comparison with Concatenator
 
 1. Concatenator adopts FastTree for Tree Construction, while CamlTree adopts IQ-TREE that is recognized as better.
-2. Concatenator abandons supports for some old operation systems such as Windows7, while CamlTree is compatible with them.
-3. Concatenator is still in an extremely unstable testing version currently and we found that it cannot run properly, while CamlTree is already stable enough to keep it available.
+2. Concatenator is still in an extremely unstable testing version currently and we found that it cannot run properly, while CamlTree is already stable enough to keep it available.
 
 ### [Guidance](./docs/User.md)
 
