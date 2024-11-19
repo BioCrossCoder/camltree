@@ -30,8 +30,7 @@
 ### 与Concatenator的对比
 
 1. Concatenator采用FastTree构建分子进化树，CamlTree则采用更受认可的IQ-TREE。
-2. Concatenator放弃了对Windows7等较旧版本操作系统的支持，而CamlTree则兼容这些操作系统。
-3. Concatenator目前仍处于极不稳定的测试版本，我们测试发现无法正常运行，而CamlTree已经足够稳定可用。
+2. Concatenator目前仍处于极不稳定的测试版本，我们测试发现无法正常运行，而CamlTree已经足够稳定可用。
 
 ## 文档导航
 
