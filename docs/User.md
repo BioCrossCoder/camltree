@@ -14,7 +14,7 @@
 
     ***You can customize a workflow through the button options in the table.***
 
-    + *Step 1*: Select **Analysis Strategy**(`Concatenation`/`Coalescence`/`Seperation`).
+    + *Step 1*: Select **Analysis Strategy**(`Concatenation`/`Coalescence`/`Separation`).
     + *Step 2*: Select **Sequence Alignment** method(`MAFFT`/`MACSE`/`Skip`).
     + *Step 3*: Select **Alignment Optimization** method(`trimAl`/`Skip`).
     + *Step 4*: Select **Tree Construction** method(`IQ-TREE`/`MrBayes`/`Skip`).
