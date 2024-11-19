@@ -4,6 +4,11 @@
 
 A bioinformatics tool, mainly used for phylogeny analysis of functional microgenes from mitochondria and viruses, and it is also suitable for any nucleic acid sequences or amino acid sequences.
 
+## Installation
+
+1. Installers for all files about CamlTree can be downloaded from https://github.com/BioCrossCoder/camltree/releases/.
+2. Windows 10 and 11 are supported, there are two ways to download and install CamlTree, one is quick that just double click the CamlTree_setup.exe, icons appear on the computer desktop, then click it to run CamlTree; the other is that double click the CamlTree-win32-x64-2.2.1.zip, then unzip it, and run CamlTree directly from this folder.
+
 ## Features
 
 + Easy to use with powerful functions.
