@@ -2,21 +2,29 @@
 
 ## Introduction
 
-A bioinformatics tool, mainly used for phylogeny analysis of functional microgenes from mitochondria and viruses, and it is also suitable for any nucleic acid sequences or amino acid sequences.
+A bioinformatics tool, mainly used for phylogeny analysis for viral and mitochondrial genomes, and it is also suitable for smaller-scale projects (containing dozens or fewer genes) concerning eukaryotic genomes (such as the nuclear genome). Both nucleic acid sequences and amino acid sequences can be used for input sequences.
 
+## Platform and environment requirement
+
+1. The operating environment should be Windows 10 or Windows 11.
+2. The MacOS version is under testing.
+3. JAVA Running Environment (JRE) is necessary for running embedded FigTree/ALTER/MACSE, so it is recommended to install JAVA before running CamlTree.
+   
 ## Installation
 
 1. Installers for all files about CamlTree can be downloaded from https://github.com/BioCrossCoder/camltree/releases/.
-2. Windows 10 and 11 are supported, there are two ways to download and install CamlTree, one is quick that just double click the CamlTree_setup.exe, icons appear on the computer desktop, then click it to run CamlTree; the other is that double click the CamlTree-win32-x64-2.2.0.zip, then unzip it, and run CamlTree directly from this folder.
+2. There are two ways to download and install CamlTree. One is to click the CamlTree_setup.exe for a quick start, the other way is to click the CamlTree-win32-x64-2.2.0.zip, then unzip it, and run CamlTree directly from the folder.
+
+## Quick start
+
+Please click [user.md](./docs/User.md) or click the “Guidance” button on the main interface of the software.
 
 ## Features
 
 + Easy to use with powerful functions.
 + A brief and beautiful responsive graphical user interface.
 + A desktop application supports Windows.
-
-    ***We used to support MacOS before successfully in `v1.x.x` versions, but it was not maintained anymore. Acutally, the permission issues in MacOS forcing us to drop support for it as we do not have enough time to waste on resolving this problem.***
-+ Integrated several popular third-party tools in the field and users can customize the operating parameters of them.
++ Integrated several popular third-party tools in the field and users can customize their operating parameters.
 
 ## Comparison
 
@@ -37,7 +45,11 @@ A bioinformatics tool, mainly used for phylogeny analysis of functional microgen
 1. Concatenator adopts FastTree for Tree Construction, while CamlTree adopts IQ-TREE that is recognized as better.
 2. Concatenator is still in an extremely unstable testing version currently and we found that it cannot run properly, while CamlTree is already stable enough to keep it available.
 
-### [Guidance](./docs/User.md)
+## Document navigation
+
+### [Guidence](./docs/User.zh.md)
+
+### [Development](./docs/Developer.md)
 
 ### Copyright
 
