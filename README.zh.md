@@ -7,7 +7,7 @@
 ## 安装
 
 1. 关于 CamlTree 的所有安装文件可以从 https://github.com/BioCrossCoder/camltree/releases/ 下载。
-2. 支持 Windows 10 和 11，有两种方式可以下载和安装 CamlTree，一种是快速安装方式，只需双击 CamlTree_setup.exe 文件，图标会出现在桌面上，点击图标即可运行 CamlTree；另一种方式是双击 CamlTree-win32-x64-2.2.1.zip 文件，然后解压，直接从该文件夹运行 CamlTree。
+2. 支持 Windows 10 和 11，有两种方式可以下载和安装 CamlTree，一种是快速安装方式，只需双击 CamlTree_setup.exe 文件，图标会出现在桌面上，点击图标即可运行 CamlTree；另一种方式是双击 CamlTree-win32-x64-2.2.0.zip 文件，然后解压，直接从该文件夹运行 CamlTree。
 
 ## 产品特色
 
